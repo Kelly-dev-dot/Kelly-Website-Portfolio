@@ -1,0 +1,48 @@
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.skills__title { font-size: 1.35rem; margin-bottom: 26px; }
+
+/* Barres de niveau */
+.bar { margin-bottom: 22px; }
+.bar__top { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 8px; }
+.bar__level { color: var(--muted); font-size: 0.85rem; font-weight: 500; }
+.bar__track { height: 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden; }
+.bar__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--cyan), var(--coral));
+  box-shadow: 0 0 14px rgba(34, 211, 238, 0.5);
+  transition: width 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Cercles animés */
+.rings { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 20px; }
+.ring { display: grid; justify-items: center; gap: 12px; text-align: center; font-weight: 600; font-size: 0.95rem; }
+.ring__circle { position: relative; width: 96px; height: 96px; display: grid; place-items: center; }
+.ring__circle svg { position: absolute; inset: 0; transform: rotate(-90deg); }
+.ring__bg, .ring__fg { fill: none; stroke-width: 5; }
+.ring__bg { stroke: rgba(255, 255, 255, 0.08); }
+.ring__fg {
+  stroke: var(--cyan);
+  stroke-linecap: round;
+  stroke-dasharray: 214; /* circonférence du cercle (2 x pi x 34) */
+  stroke-dashoffset: 214;
+  filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.7));
+  transition: stroke-dashoffset 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ring__fg.is-drawn { stroke-dashoffset: 0; }
+.ring__icon { color: var(--coral); }
+
+.skills__stack { margin: 90px 0 8px; }
+.skills__hint { color: var(--muted); margin: -12px 0 22px; }
+
+@media (max-width: 860px) {
+  .skills { grid-template-columns: 1fr; gap: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bar__fill, .ring__fg { transition: none; }
+}

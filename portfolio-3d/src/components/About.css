@@ -1,0 +1,18 @@
+.about {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.about__text h3 { font-size: 1.6rem; margin-bottom: 16px; }
+.about__text p { color: var(--muted); margin-bottom: 14px; max-width: 62ch; }
+.about__text .btn { margin-top: 12px; }
+.about__facts { display: grid; gap: 14px; }
+.about__fact {
+  padding: 18px 22px;
+  font-weight: 600;
+  border-left: 3px solid var(--cyan);
+}
+@media (max-width: 860px) {
+  .about { grid-template-columns: 1fr; gap: 32px; }
+}

@@ -1,0 +1,25 @@
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.services__card { height: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.services__card:hover { box-shadow: 0 0 34px rgba(34, 211, 238, 0.22); }
+.services__card h3 { font-size: 1.3rem; margin: 18px 0 10px; }
+.services__card p { color: var(--muted); margin-bottom: 22px; }
+.services__icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--cyan);
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  box-shadow: 0 0 22px rgba(34, 211, 238, 0.25);
+}
+.services__btn { margin-top: auto; padding: 10px 22px; font-size: 0.9rem; border-color: var(--cyan); color: var(--cyan); }
+.services__btn:hover { background: var(--cyan); color: #02222b; }
+@media (max-width: 900px) {
+  .services__grid { grid-template-columns: 1fr; }
+}
