@@ -50,11 +50,11 @@ export const levels = { 1: 'Basics', 2: 'Beginner', 3: 'Intermediate', 4: 'Advan
 
 export const technicalSkills = [
   { name: 'Python', level: 3 },
-  { name: 'PHP', level: 3 },
-  { name: 'JavaScript', level: 3 },
-  { name: 'MySQL', level: 3 },
-  { name: 'HTML / CSS', level: 3 },
-  { name: 'Vue.js', level: 2 },
+  { name: 'PHP', level: 4 },
+  { name: 'JavaScript', level: 4 },
+  { name: 'MySQL', level: 4 },
+  { name: 'HTML / CSS', level: 4 },
+  { name: 'Vue.js', level: 4 },
 ];
 
 // icon: team | chat | bolt | spark  (see Icons.jsx)
