@@ -50,7 +50,7 @@ export const levels = { 1: 'Basics', 2: 'Beginner', 3: 'Intermediate', 4: 'Advan
 
 export const technicalSkills = [
   { name: 'Python', level: 3 },
-  { name: 'PHP', level: 4 },
+  { name: 'PHP', level: 3 },
   { name: 'JavaScript', level: 4 },
   { name: 'MySQL', level: 4 },
   { name: 'HTML / CSS', level: 4 },
@@ -104,10 +104,10 @@ export const projects = [
     image: '',
   },
   {
-    title: '3D Portfolio',
-    text: 'This site: React, Three.js and real-time physics, loaded on demand to stay fast.',
-    tags: ['React', 'Three.js', 'Rapier'],
-    href: '#',
+    title: 'Data Entry & Web Research',
+    text: 'Freelance work: spreadsheets, data entry and web research. Click to see screenshots and videos.',
+    tags: ['Google Sheets', 'Excel', 'Data Entry', 'Web Research'],
+    gallery: true,
     image: '',
   },
 ];
